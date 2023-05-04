@@ -19,7 +19,7 @@ public class FilmController {
     @GetMapping("/film")
     public List<Film> getUsers() {
         log.debug("Запрос списка фильмов");
-        List<Film> list;
+          List<Film> list;
         return list = new ArrayList<Film>(films.values());
     }
 
