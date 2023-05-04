@@ -24,7 +24,7 @@ public class FilmController {
     }
 
     @PostMapping("/film")
-    public Film create(@RequestBody Film film) throws ValidationException {
+    public Film create(@RequestBody Film film) {
         log.debug("Добавление фильма в список");
         if (film.getName() != null && film.getReleaseDate().isBefore(date) && film.getDescription().length() <= 200 && film.getDuration().isPositive()) {
            films.put(film.getId(), film);
@@ -33,7 +33,7 @@ public class FilmController {
     }
 
     @PutMapping("/film")
-    public Film update(@RequestBody Film film) throws ValidationException {
+    public Film update(@RequestBody Film film) {
        if (films.containsKey(film.getId())) {
            log.debug("обновление фильма");
            films.replace(film.getId(), film);
