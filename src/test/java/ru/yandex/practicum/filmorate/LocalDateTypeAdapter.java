@@ -21,4 +21,4 @@ public class LocalDateTypeAdapter implements JsonSerializer<LocalDate>, JsonDese
         return LocalDate.parse(json.getAsString(), formatter);
     }
 }
-
+//изменения
