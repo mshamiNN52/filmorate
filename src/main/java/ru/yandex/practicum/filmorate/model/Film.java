@@ -14,9 +14,9 @@ public class Film {
     @Positive (message = "id cannot be negative")
     private final Integer id;
     @NotNull (message = "Name cannot be null")
-    private final String name;
+    private final String name ;
     @Size(min = 1, max = 200)
-    private final String description;
+    private final String description ;
     private final LocalDate releaseDate;
     @Positive(message = "duration cannot be negative")
     private final Duration duration;

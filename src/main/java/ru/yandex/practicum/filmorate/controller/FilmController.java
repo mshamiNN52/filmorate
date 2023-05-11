@@ -14,13 +14,13 @@ import java.util.Map;
 @Slf4j
 public class FilmController {
     private final LocalDate date =LocalDate.of(1985,12,28);
-    Map<Integer, Film> films = new HashMap<>();
+    Map<Integer, Film> films = new HashMap<> ();
 
     @GetMapping("/film")
     public List<Film> getUsers() {
         log.debug("Запрос списка фильмов");
           List<Film> list;
-        return list = new ArrayList<Film>(films.values());
+        return list = new ArrayList<Film> (films.values());
     }
 
     @PostMapping("/film")
